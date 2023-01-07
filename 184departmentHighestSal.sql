@@ -1,0 +1,1 @@
+Select d.name as Department,E.name as Employee ,salary from Employee E inner join Department D on E.Departmentid = D.id where (departmentid,salary) in (select departmentid,max(salary) from employee group by departmentid);
